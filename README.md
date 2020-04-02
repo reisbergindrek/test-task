@@ -1,5 +1,9 @@
 # README #
 
+### What do I need to run this? ###
+* You need to have git and Docker installed to make local deployment.
+* (or you can use Maven to build the .war)
+
 ### How do I get set up? ###
 ```bash
 user@cpu ~ % git clone https://github.com/reisbergindrek/test-task.git (grabs code to your local computer)
