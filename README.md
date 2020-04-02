@@ -1,29 +1,28 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
 ### How do I get set up? ###
+```bash
+user@cpu ~ % git clone git@bitbucket.org:indrekreisberg/test-task.git (grabs code to your local computer)
+user@cpu ~ % ...
+user@cpu ~ % cd test-task
+user@cpu ~ % docker image build -t indrek-java-webapp . (runs Dockerfile, with Maven which compiles the .war, also runs tests)
+user@cpu ~ % ...
+user@cpu ~ % docker container run -it --publish 1337:8080 indrek-java-webapp (runs web app on port 1337)
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```
+Now when the server is running, you can use terminal to send the requests as such:
 
-### Contribution guidelines ###
+```bash
+user@cpu ~ % curl -d 10 http://localhost:1337/
+user@cpu ~ % curl -d 5 http://localhost:1337/
+user@cpu ~ % curl -d 30303 http://localhost:1337/
+user@cpu ~ % curl -d end http://localhost:1337/
+30318%
+user@cpu ~ % 
 
-* Writing tests
-* Code review
-* Other guidelines
+```
 
-### Who do I talk to? ###
+### Notes ###
 
-* Repo owner or admin
-* Other community or team contact
+* Unfortunately couldn't get the SumControllerTest running!?
+* Weird % sign when returning the response!?
