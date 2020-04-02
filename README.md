@@ -2,7 +2,7 @@
 
 ### How do I get set up? ###
 ```bash
-user@cpu ~ % git clone git@bitbucket.org:indrekreisberg/test-task.git (grabs code to your local computer)
+user@cpu ~ % git clone https://github.com/reisbergindrek/test-task.git (grabs code to your local computer)
 user@cpu ~ % ...
 user@cpu ~ % cd test-task
 user@cpu ~ % docker image build -t indrek-java-webapp . (runs Dockerfile, with Maven which compiles the .war, also runs tests)
